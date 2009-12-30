@@ -42,15 +42,11 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(params[:owner])
 
-    respond_to do |format|
-      if @owner.save
-        flash[:notice] = 'Owner was successfully created.'
-        format.html { redirect_to(@owner) }
-        format.xml  { render :xml => @owner, :status => :created, :location => @owner }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @owner.errors, :status => :unprocessable_entity }
-      end
+    if @owner.save
+      flash[:notice] = 'Owner was successfully created.'
+      redirect_to owners_url
+    else
+      render :action => "new"
     end
   end
 

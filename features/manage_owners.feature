@@ -7,7 +7,8 @@ Feature: Managing Owners
     Given I am on the homepage
     And I follow "Owners"
     Then I should be on the owners index page
-    Given I fill in "Name" with "Clayton"
+    Given I follow "New owner"
+    And I fill in "Name" with "Clayton"
     And I fill in "E-Mail" with "clayton@example.org"
     And I fill in "Address" with "100 Cactus Rd"
     And I fill in "City" with "Scottsdale"
@@ -17,4 +18,3 @@ Feature: Managing Owners
     When I press "Create"
     Then I should see "Owner was successfully created."
     And I should be on the owners index page
-
