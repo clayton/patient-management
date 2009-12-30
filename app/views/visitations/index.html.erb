@@ -1,0 +1,18 @@
+<h3>Listing visitations</h3>
+
+<table>
+  <tr>
+  </tr>
+
+<% @visitations.each do |visitation| %>
+  <tr>
+    <td><%= link_to 'Show', visitation %></td>
+    <td><%= link_to 'Edit', edit_visitation_path(visitation) %></td>
+    <td><%= link_to 'Destroy', visitation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New visitation', new_visitation_path %>

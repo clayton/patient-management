@@ -1,0 +1,11 @@
+<h3>New visitation</h3>
+
+<% form_for(@visitation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', visitations_path %>

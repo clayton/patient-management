@@ -1,0 +1,12 @@
+<h3>Editing visitation</h3>
+
+<% form_for(@visitation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @visitation %> |
+<%= link_to 'Back', visitations_path %>

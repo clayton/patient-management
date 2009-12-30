@@ -1,0 +1,11 @@
+<h3>New pet</h3>
+
+<% form_for(@pet) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pets_path %>
