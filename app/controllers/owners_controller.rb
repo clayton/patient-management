@@ -58,7 +58,7 @@ class OwnersController < ApplicationController
     respond_to do |format|
       if @owner.update_attributes(params[:owner])
         flash[:notice] = 'Owner was successfully updated.'
-        format.html { redirect_to(@owner) }
+        format.html { redirect_to(owners_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

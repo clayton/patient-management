@@ -1,12 +1,18 @@
 <h3>Listing owners</h3>
 
 <table>
-  <tr>
-  </tr>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>E-Mail</th>
+      <th colspan="2">Manage</th>
+    </tr>
+  </thead>
 
 <% @owners.each do |owner| %>
   <tr>
-    <td><%= link_to 'Show', owner %></td>
+    <th><%=  owner.name %></th>
+    <th><%=  owner.email %></th>
     <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
     <td><%= link_to 'Destroy', owner, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

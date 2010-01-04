@@ -18,3 +18,17 @@ Feature: Managing Owners
     When I press "Create"
     Then I should see "Owner was successfully created."
     And I should be on the owners index page
+
+
+  Scenario: Editing an existing Owner
+    Given the following owners:
+     | name    | email               | address       |
+     | Clayton | clayton@example.org | 100 Cactus Rd |
+    Given I am on the homepage
+    And I follow "Owners"
+    Then I should be on the owners index page
+    When I follow "Edit"
+    And I fill in "Address" with "567 N Scottsdale Rd"
+    When I press "Update"
+    Then I should see "Owner was successfully updated."
+    And I should be on the owners index page

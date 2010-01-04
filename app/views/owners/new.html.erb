@@ -2,34 +2,7 @@
 
 <% form_for(@owner) do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :email, "E-Mail" %>
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :address, "Address" %>
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.label :city, "City" %>
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state, "State" %>
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :zip, "Postal Code" %>
-    <%= f.text_field :zip %>
-  </p>
-  <p>
-    <%= f.label :phone, "Phone" %>
-    <%= f.text_field :phone %>
-  </p>
+    <%= render :partial => 'form', :locals => {:f => f} %>
   <p>
     <%= f.submit 'Create' %>
   </p>
